@@ -1,0 +1,42 @@
+@import "variables";
+
+@font-face {
+  font-family: 'Avenir Next LT Pro';
+  src: url('../media/fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+  url('../media/fonts/AvenirNextLTPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lehigh Personal';
+  src: url('../media/fonts/LehighPersonal-Bold.woff2') format('woff2'),
+  url('../media/fonts/LehighPersonal-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+$sansSerifFont: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+$headerFont: 'Lehigh Personal', serif;
+$titleFont: 'Avenir Next LT Pro', 'Helvetica', 'Arial', sans-serif;
+
+$fontLehigh: 'Lehigh Personal', Georgia, "Times New Roman", sans-serif;
+
+$fontRoboto: 'Roboto', Helvetica, Arial, sans-serif;
+
+.header {
+  font-family: $headerFont;
+}
+
+.flexo__title {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: $titleFont;
+  font-size: 50px;
+
+
+  @include smallDesktop {
+    font-size: 70px;
+  }
+}

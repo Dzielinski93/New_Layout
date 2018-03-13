@@ -1,0 +1,172 @@
+@import "colors";
+@import "variables";
+@import "animations";
+
+.flexo-numbers {
+  background-color: $mainBlue;
+  color: $contrast;
+  padding: 40px 0;
+  font-family: $fontRoboto;
+  position: relative;
+
+  &__container {
+
+    @media (min-width: 580px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    position: relative;
+
+    @media (min-width: 580px) {
+      max-width: 162px;
+      margin: 0 auto;
+      justify-content: flex-start;
+
+      &:not(:last-child) {
+        margin-right: 14px;
+      }
+    }
+
+    @include desktop {
+      margin: 0 10px;
+      max-width: 378px;
+    }
+
+    //&:hover {
+    //  transform: scale(1.1);
+    //
+    //  .flexo-rolled-divider {
+    //    width: 20%;
+    //  }
+
+      //.flexo-numbers__number {
+      //  border: none;
+      //  background-color: $contrast;
+      //  color: $mainBlue;
+      //  animation-name: pulse;
+      //  animation-duration: 0.8s;
+      //  animation-direction: alternate;
+      //  animation-iteration-count: infinite;
+      //  font-size: 30px;
+      //
+      //  &:before {
+      //    background-color: transparent;
+      //    height: 95px;
+      //    width: 95px;
+      //    top: 4px;
+      //    left: 4px;
+      //    border: 3px solid $mainBlue;
+      //
+      //    @include desktop {
+      //      top: 6px;
+      //      left: 6px;
+      //      height: 160px;
+      //      width: 160px;
+      //    }
+      //  }
+      //}
+    //}
+  }
+
+  &__number {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 21px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: all 0.3s;
+    cursor: pointer;
+    top: 48px;
+    left: 50%;
+    transform: translatex(-50%);
+    white-space: nowrap;
+
+    @include desktop {
+      font-size: 30px;
+      line-height: 35px;
+      letter-spacing: 2px;
+      top: 75px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 30px;
+
+    @include desktop {
+      font-size: 24px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 30px;
+    max-width: 156px;
+    text-align: center;
+    font-weight: 300;
+
+    @include tablet {
+      line-height: 22px;
+    }
+
+    @include desktop {
+      max-width: 378px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+}
+
+.flexo-rolled-divider {
+  width: 0;
+  height: 3px;
+  background-color: $contrast;
+  display: inline;
+  transition: all 0.6s;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.e-c-base {
+  fill: none;
+}
+
+.e-c-progress {
+  fill: none;
+  stroke: $contrast;
+  stroke-width: 8px;
+  transition: stroke-dashoffset 0.7s;
+}
+
+.e-c-pointer {
+  fill: #FFF;
+}
+
+#e-pointer { transition: transform 1s; }
+
+#about {
+  position: absolute;
+  top: 22px;
+}
+
+.circle svg {
+  width: 108px;
+
+  @include desktop {
+    width: 178px;
+  }
+}

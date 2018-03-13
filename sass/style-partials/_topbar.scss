@@ -1,0 +1,231 @@
+body.menu-open {
+  position: relative;
+  overflow: hidden;
+
+  .flexo-modal {
+    top: 0;
+    height: 100vh;
+  }
+}
+
+.flexo-modal {
+  overflow-y: scroll;
+  height: 0;
+  left: 0;
+  right: 0;
+  transition: all .7s;
+  position: fixed;
+  top: -100%;
+  background-color: $mainBackground;
+  z-index: 2;
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 50px 0;
+    justify-content: space-between;
+  }
+
+  &__menu-element {
+    color: $separatorColor;
+    font-family: $sansSerifFont;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    display: flex;
+  }
+
+  &__menu-language-header {
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.flexo-topbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+
+  path {
+    transition: all 0.3s;
+  }
+
+  &__container {
+    margin: 0 1.5em;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 24px;
+    transition: all 0.3s;
+  }
+
+  &__menu-element--logo {
+    display: flex;
+  }
+
+  &__menu-list {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__menu-list-element {
+    color: $mainText;
+    font-family: $fontRoboto;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 28px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 64px;
+    transition: all .3s;
+  }
+
+  //&__menu-languages {
+  //  display: none;
+  //}
+
+  &__menu-language-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .flexo-menu__language-list-element {
+    margin-left: 24px;
+    position: relative;
+    left: -5px;
+    cursor: pointer;
+    color: $mainText;
+    transition: all .3s;
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border: 3px solid transparent;
+      border-top: 3px solid $mainText;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -10px;
+    }
+  }
+
+  .flexo-topbar__menu-languages {
+    height: 0;
+    transition: all .3s;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+
+    &.open {
+      height: 65px;
+    }
+
+    .flexo-menu-list-element {
+      color: $mainText;
+      margin: 5px;
+    }
+  }
+
+  &.floating {
+    background-color: $mainBlue;
+    box-shadow: 0 14px 11px -12px rgba(0, 0, 0, 0.2);
+
+    path {
+      fill: white !important;
+    }
+
+    .flexo-topbar__menu {
+      padding: 14px 0 8px;
+    }
+
+    .flexo-separator {
+      display: none;
+    }
+
+    .flexo-topbar__menu-list-element {
+      color: $contrast;
+    }
+
+    .flexo-menu__language-list-element {
+      color: $contrast;
+
+      &:after {
+        border-top: 3px solid $contrast;
+      }
+    }
+
+    .flexo-menu-list-element {
+      color: $contrast;
+    }
+
+    .flexo-topbar__menu-languages {
+      background: #0F6AE6;
+    }
+  }
+}
+
+.language-header__icon {
+  align-self: center;
+  margin-right: 24px;
+}
+
+.hamburger-icon {
+  cursor: pointer;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 28px;
+  justify-content: space-between;
+  z-index: 99;
+  position: fixed;
+  right: 1.5em;
+  top: 24px;
+  transition: all 0.3s;
+
+  &__stripe {
+    height: 4px;
+    width: 29px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  &.floating {
+    top: 7px;
+  }
+}
+
+body.menu-open {
+
+  .hamburger-icon__stripe {
+    background-color: #666;
+  }
+
+  #stripe-one {
+    transform: translateY(12px) rotate(45deg);
+  }
+
+  #stripe-two {
+    width: 0;
+  }
+
+  #stripe-three {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+}

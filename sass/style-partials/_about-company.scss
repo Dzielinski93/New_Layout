@@ -1,0 +1,148 @@
+@import "_colors.scss";
+@import "_variables.scss";
+
+.flexo-about__header--title,
+.flexo-about__company-offer--title {
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: $mainText;
+  line-height: 36px;
+  font-family: $headerFont;
+  font-weight: bold;
+  margin-bottom: 6px;
+
+  @include tablet {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+}
+
+.flexo-about__header--into,
+.flexo-about__company-offer--text {
+  width: 100%;
+  color: $mainText;
+  font-family: $fontRoboto;
+  font-size: 12px;
+  line-height: 26px;
+  margin-bottom: 31px;
+  font-weight: 300;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+.flexo-about__header--into {
+  margin-bottom: 60px;
+}
+
+.flexo-about__header{
+  margin: 40px 0;
+  background-image: url("../media/images/flexocore_loop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    max-width: 840px;
+    padding: 95px 150px 65px;
+  }
+}
+
+.flexo-about__company-offer {
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 80px;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.flexo-about__company-offer-image {
+  width: 100%;
+  overflow: hidden;
+  height: 165px;
+  background-size: cover;
+  background-position: center;
+
+  @include tablet {
+    height: 270px;
+  }
+
+  @include desktop {
+    flex: 1;
+    order: 1;
+    height: 276px;
+  }
+
+  &.flexo-about-1 {
+    background-image: url("../media/images/flexocore_1.jpg");
+  }
+
+  &.flexo-about-2 {
+    background-image: url("../media/images/flexocore_2.jpg");
+  }
+
+  &.flexo-about-3 {
+    background-image: url("../media/images/flexocore_3.jpg");
+  }
+
+  &.flexo-about-4 {
+    background-image: url("../media/images/flexocore_4.jpg");
+  }
+}
+
+.flexo-about__company-offer-category {
+  color: $offerColor;
+  font-family: $fontRoboto;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 13px;
+  margin-top: 17px;
+
+  @include tablet {
+    margin-top: 30px;
+    margin-bottom: 6px;
+  }
+
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
+.flexo-about__company-offer--title {
+  text-align: left;
+  margin-top: 0;
+}
+
+
+.flexo-about {
+
+  &__header-separator{
+    margin: 40px auto;
+  }
+}
+
+.flexo-about__info {
+
+  @include desktop {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    padding-right: 30px;
+  }
+}

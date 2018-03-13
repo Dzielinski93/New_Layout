@@ -1,0 +1,10 @@
+.flexo-footer {
+
+  &__logo {
+    margin: 38px auto 32px;
+
+    @include desktop {
+      margin: 38px 0 32px;
+    }
+  }
+}

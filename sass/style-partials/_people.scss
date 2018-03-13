@@ -1,0 +1,95 @@
+@import "_colors.scss";
+@import "_variables.scss";
+
+.flexo-people {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.flexo-people__container {
+  @include desktop {
+    display: flex;
+  }
+}
+
+.flexo-people__employees {
+  margin-bottom: 40px;
+
+  @include desktop {
+    flex: 1;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.flexo-people__employees--employee-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include tablet {
+    align-items: flex-end;
+  }
+}
+
+.flexo-people__employees--employee-img-container {
+  margin-right: 10px;
+  width: 68px;
+  border-radius: 50%;
+  height: 68px;
+  overflow: hidden;
+
+  @include tablet {
+    height: 120px;
+    width: 120px;
+  }
+
+  @include desktop {
+    margin-right: 25px;
+  }
+}
+
+.flexo-people__employees-employee-position-name-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexo-people__employees--employee-img {
+  height: 100%;
+  width: auto;
+}
+
+.flexo-people__employees-employee-position {
+  color: $offerColor;
+  font-family: $fontRoboto;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 13px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.flexo-people__employees-employee-name {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: $mainText;
+  font-family: $headerFont;
+  font-weight: bold;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.flexo-people__employees-employee-info {
+  width: 100%;
+  color: $mainText;
+  font-family: $fontRoboto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 30px;
+  margin-top: 10px;
+}

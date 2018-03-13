@@ -1,0 +1,27 @@
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg)
+    translateY(-15px) translateX(71px)
+    rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg)
+    translateY(-15px) translateX(71px)
+    rotate(-360deg);
+  }
+}
